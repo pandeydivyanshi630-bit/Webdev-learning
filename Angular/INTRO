@@ -1,0 +1,189 @@
+# Webdev-learning
+# Introduction to Angular — Day 1 Notes
+
+**Module 5 · Frontend Frameworks — Angular**
+**Instructor:** Dinesh Rawat (Shorter Loop × Snapied)
+
+Full-Stack Internship notes covering what Angular is, why we use it, and the ideas behind it — plus a first look at TypeScript, ECMAScript, and the Angular CLI.
+
+---
+
+## Table of Contents
+
+1. [Why Should We Use Angular?](#1-why-should-we-use-angular)
+2. [Performance](#2-performance)
+3. [Mobile Support](#3-mobile-support)
+4. [Language Choices](#4-language-choices)
+5. [What is ECMAScript?](#5-what-is-ecmascript)
+6. [What is TypeScript?](#6-what-is-typescript)
+7. [Installing Angular](#7-installing-angular)
+8. [What is the Angular CLI?](#8-what-is-the-angular-cli)
+9. [Remember This (Summary)](#9-remember-this-summary)
+10. [Homework](#10-homework)
+
+---
+
+## 1. Why Should We Use Angular?
+
+Angular is one of the most popular JavaScript frameworks for building web applications, made and maintained by **Google**. Many developers use it — the reasons come down to the improvements it gives us, covered below.
+
+---
+
+## 2. Performance
+
+- **Faster initial loads** — the app starts quickly.
+- **Efficient change detection** — the screen updates efficiently.
+- **Improved rendering time** — updates render fast.
+- **Better modularity** — code is split into clean, separate parts.
+- **Dependency injection** — a tidy way to share code and services.
+- **Testability** — the app is easy to test.
+
+> Don't worry if these terms feel unfamiliar — each will be covered in detail in later classes.
+
+Angular keeps getting faster with every release. It's currently on **version 22**, with each version focused on smaller, faster apps. Speed is a deliberate design goal, not an accident.
+
+---
+
+## 3. Mobile Support
+
+Angular is built with mobile in mind from the ground up — touch interfaces, small screens, and limited hardware are all considered in its design.
+
+This means you can build **one single application** that works across both mobile and desktop, without bolting on separate third-party tools.
+
+---
+
+## 4. Language Choices
+
+Angular supports multiple languages to write your app in:
+
+- Plain JavaScript
+- Newer versions of the JavaScript standard
+- **TypeScript** (most popular, and what this course uses)
+
+Angular itself is built using TypeScript. This raises two natural questions, answered next: *What is ECMAScript?* and *What is TypeScript?*
+
+---
+
+## 5. What is ECMAScript?
+
+ECMAScript is the **official name for the JavaScript language standard**. Many versions have been released over the years, each adding new features.
+
+- **ES6 = ES2015** — these are the same thing, just renamed. It introduced classes, modules, and arrow functions.
+- A new version has released roughly every year since, and modern browsers support these features directly.
+
+**In one line:** ECMAScript is just the official name for the JavaScript language, updated yearly with new features.
+
+---
+
+## 6. What is TypeScript?
+
+TypeScript is a **free, open-source language developed by Microsoft**. It's a **superset of JavaScript** — meaning:
+
+- Every bit of valid JavaScript is already valid TypeScript.
+- TypeScript adds more on top.
+- A **compiling** step turns TypeScript into plain JavaScript that browsers can run.
+
+**What it adds:**
+- **Types**
+- Object-oriented features (classes, interfaces, inheritance) — familiar if you've used Java or C++
+
+This makes writing, maintaining, and refactoring Angular apps genuinely pleasant, which is why TypeScript is the #1 choice for Angular developers.
+
+**Do I need to learn TypeScript first?** No — every concept needed will be covered step by step during the course. It's also fully supported in all popular code editors.
+
+---
+
+## 7. Installing Angular
+
+Three steps — complete and verify each before moving to the next.
+
+### Step 1: Install Node.js
+
+Angular runs on top of Node.js.
+
+- Go to [nodejs.org](https://nodejs.org) and install the **LTS (stable)** version.
+- Angular needs **Node 20.19 or newer**.
+
+**Check it worked:**
+```bash
+node -v
+npm -v
+```
+Both should print a version number. Installing Node also gives you **npm**, the package downloader.
+
+### Step 2: Install the Angular CLI
+
+Install once, globally:
+```bash
+npm install -g @angular/cli
+```
+
+**Check it worked:**
+```bash
+ng version
+```
+If it prints a version number (currently Angular 22), you're ready.
+
+### Step 3: Create and Run Your First App
+
+```bash
+ng new my-first-app
+cd my-first-app
+ng serve
+```
+
+Then open your browser to:
+```
+http://localhost:4200
+```
+
+You should see your Angular app running — your first Angular application is live! 🎉
+
+---
+
+## 8. What is the Angular CLI?
+
+The **CLI (Command Line Interface)** is Angular's official command-line tool — the `ng` command you just used. Instead of setting up projects and files by hand, the CLI:
+
+- Creates the project
+- Generates code
+- Runs the app
+- Builds it for release
+
+**In one line:** the Angular CLI is a helper tool you run in the terminal that creates, builds, and runs your Angular project so you can focus on writing the app, not the setup.
+
+### Most-Used Commands
+
+| Command | What it does |
+|---|---|
+| `ng new <name>` | Create a brand new Angular project, fully set up |
+| `ng serve` | Run the app locally, with auto-reload on save |
+| `ng generate component <name>` (short: `ng g c <name>`) | Create a new component with all its files |
+| `ng build` | Package the app into final files for a real server |
+| `ng test` | Run your tests |
+| `ng version` | Show installed versions |
+
+**Why the CLI matters:** it gives every Angular project the same clean structure and saves hours of manual setup. One command, and a whole working feature appears — correctly wired up.
+
+---
+
+## 9. Remember This (Summary)
+
+- Angular is a popular Google framework for building web apps.
+- **Performance:** fast loads, fast updates, plus clean modularity, dependency injection, and easy testing.
+- **Mobile:** built for mobile and desktop from one single app.
+- **Language:** we write Angular in TypeScript, the most popular choice.
+- **ECMAScript** = the official name of JavaScript. **TypeScript** = JavaScript + types, made by Microsoft.
+- **Install:** Node.js → `npm install -g @angular/cli` → `ng new` → `ng serve`.
+- The **CLI** (`ng`) creates, runs, and builds your app for you.
+
+---
+
+## 10. Homework
+
+- [ ] Install everything yourself and get `ng serve` running.
+- [ ] Open `localhost:4200` and confirm you see your app.
+- [ ] If you hit an error: read it, search it, try again — that struggle *is* the learning.
+- [ ] In your own words, write **one line each**: what is ECMAScript, and what is TypeScript?
+- [ ] Run `ng generate component hello` inside your project and see what files appear.
+- [ ] **Think about it:** why do you think Angular gives us a CLI instead of making us set everything up by hand?
